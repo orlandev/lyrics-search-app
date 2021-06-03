@@ -13,7 +13,7 @@ interface ILyricsDao {
     suspend fun update(lyric: Lyric)
 
     @Query("SELECT * FROM lyrics ORDER BY id DESC")
-    fun getWallpapers(): LiveData<List<Lyric>>
+    fun getLyrics(): LiveData<List<Lyric>>
 
     @Query("DELETE FROM lyrics")
     suspend fun deleteAll()
